@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>ユーザー一覧</title>
+</head>
+<body>
+<h1>ユーザー一覧</h1>
+<table>
+  <tr>
+    <th>名前</th><th>権限</th>
+  </tr>
+  <tr th:each="user : ${users}">
+    <td th:text="${user.name}"></td>
+    <td th:if="${user.role} == 'admin'">管理者</td>
+    <td th:if="${user.role} == 'user'">一般</td>
+  </tr>
+</table>
+</body>
+</html>

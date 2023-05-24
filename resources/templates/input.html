@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Web</title>
+</head>
+<body>
+<th:block th:insert="common/header"></th:block>
+<form action="output" method="POST">
+    名前を入力して下さい。<br/>
+    <input type="text" name="userName"/>
+    <button type="submit">送信</button>
+</form>
+</body>
+</html>
